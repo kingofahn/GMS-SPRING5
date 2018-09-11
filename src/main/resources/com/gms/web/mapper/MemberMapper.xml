@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.gms.web.mapper.MemberMapper">
+  <select id="selectOne" resultType="com.gms.web.domain.MemberDTO">
+    SELECT *
+    FROM MEMBER 
+    WHERE USERID LIKE #{userid}
+  </select> 
+  
+  <select id="login" resultType="com.gms.web.domain.MemberDTO">
+	SELECT *
+	FROM MEMBER
+	WHERE USERID LIKE #{userid}
+	AND PASSWORD LIKE #{password}
+  </select>
+  
+  <insert id="insert">
+	INSERT INTO MEMBER (USERID, SSN, NAME, ROLL, TEAMID, PASSWORD, AGE, GENDER, SUBJECT, EMAIL, PHONE)
+	VALUES (#{userid}, #{ssn}, #{name}, #{roll}, #{teamid}, #{password}, #{age}, #{gender}, #{subject}, #{email}, #{phone});
+  </insert>
+  
+  <update id="update">
+	UPDATE MEMBER
+	SET PASSWORD = #{password},
+	TEAMID = #{teamid},
+	ROLL = #{roll}
+	WHERE USERID LIKE #{userid}
+  </update>
+  
+  <delete id="delete">
+	DELETE FROM MEMBER 
+	WHERE USERID LIKE #{userid}
+	AND PASSWORD LIKE #{password}
+  </delete>
+</mapper>
