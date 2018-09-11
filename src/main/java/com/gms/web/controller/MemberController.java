@@ -27,6 +27,7 @@ public class MemberController {
 	@RequestMapping("/list")
 	public void list() {}
 	
+	
 	@RequestMapping("/search")
 	public void search() {}
 	
