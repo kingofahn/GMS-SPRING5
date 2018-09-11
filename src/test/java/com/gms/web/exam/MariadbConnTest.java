@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.gms.web.img.MariadbConn;
+
 public class MariadbConnTest {
 
 	@Test

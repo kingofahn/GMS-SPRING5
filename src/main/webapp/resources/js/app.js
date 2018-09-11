@@ -16,6 +16,7 @@ app = {
 			$('#join_btn').click(()=>{   
 				location.href = app.x()+'/move/public/member/add';
 			});
+			
 			$('#logout_btn').click(()=>{   
 				location.href = app.x()+'/member/logout';
 			});
