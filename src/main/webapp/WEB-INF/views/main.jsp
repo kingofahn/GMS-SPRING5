@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,31 +14,18 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 	<%-- <script src="${ctx}/resources/js/app.js"></script> --%>
-	
     <link href="${ctx}/resources/otherresources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/resources/otherresources/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/resources/otherresources/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/resources/css/style.css" rel="stylesheet"/>
-	
 </head>	
 
 <body>
 <div id="wrapper">
- 	<div id="header">
-		<tiles:insertAttribute name="header"/>
-	</div> 
- 	<div id="nav">
-		<tiles:insertAttribute name="nav"/>
-	</div> 
-	<div id="content">
-		<tiles:insertAttribute name="content"/>
-	</div> 
-	<div id="footer">
-		<tiles:insertAttribute name="footer"/>
-	</div> 
 </div> 
+	안녕 !! AJAX할 준비 완료
 
 </body>
 </html>

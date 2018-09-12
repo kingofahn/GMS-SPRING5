@@ -9,13 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import com.gms.web.cmm.Util;
 
 @RestController
 @Controller
 @RequestMapping("/member")
-@SessionAttributes("user")
 
 public class MemberCtrl {
 	@Autowired Member member;

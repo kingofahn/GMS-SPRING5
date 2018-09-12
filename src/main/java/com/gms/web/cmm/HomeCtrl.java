@@ -8,10 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
-
 @Controller
-@SessionAttributes("ctx")
 public class HomeCtrl {
 	static final Logger logger = LoggerFactory.getLogger(HomeCtrl.class);
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -20,7 +17,7 @@ public class HomeCtrl {
 		logger.info("\n --------- Welcome {} !! ----------","Home");
 		session.setAttribute("ctx", ctx);
 		//model.addAttribute("context", "");
-		return "public:common/content.tiles";
+		return "main";
 	}
 	@RequestMapping("/move/{prefix}/{dir}/{page}")
 	public String move(
