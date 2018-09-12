@@ -19,12 +19,12 @@
     <link href="${ctx}/resources/otherresources/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/resources/otherresources/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/resources/css/style.css" rel="stylesheet"/>
-    <script src="${ctx}/resources/js/app.js"></script>
+    <script src="${ctx}/resources/js/algo.js"></script>
 </head>	
 <body>
 <div id="wrapper"> </div> 
 <script>
-	app.init('${ctx}');
+	algo.init('${ctx}');
 </script>
 </body>
 </html>

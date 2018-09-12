@@ -4,7 +4,6 @@ var user = user || {};
 app = {
 		init : x =>{
 			console.log('step 1')
-			app.session.context(x);  // 경로설정
 			app.onCreate();          // 생성자 느낌
 		},
 		onCreate : () =>{
@@ -16,7 +15,6 @@ app = {
 			$('#join_btn').click(()=>{   
 				location.href = app.x()+'/move/public/member/add';
 			});
-			
 			$('#logout_btn').click(()=>{   
 				location.href = app.x()+'/member/logout';
 			});
@@ -42,43 +40,7 @@ app = {
                 $('#joinForm').attr({action:app.x()+"/member/add", method:"POST"}).submit();
             });
 		},
-		setContentView : ()=>{
-			console.log('step 4' + app.session.path('ctx'));
+		setContentView : ()=>{ // 여기에 코딩하는 부분은 동적ui부분이다.
+			console.log('step 4');
 		}
 };
-
-app.session ={
-	context : x=> {
-		console.log('step 2' + x)
-		sessionStorage.setItem('ctx',x);
-		sessionStorage.setItem('js',x+'/resources/js');
-		sessionStorage.setItem('cs',x+'/resources/css');
-		sessionStorage.setItem('img',x+'/resources/img');
-	},
-	path : x=> {
-		return sessionStorage.getItem(x);
-	}
-};
-
-app.x = ()=>{
-	return app.session.path('ctx');
-};
-app.j = ()=>{
-	return app.session.path('js');
-};
-app.c = ()=>{
-	return app.session.path('css');
-};
-app.i = ()=>{
-	return app.session.path('img');
-};
-
-user.session = x=>{
-		$.each(x, (k,v)=>{
-		/*alert('key:'+k+', value:'+v)*/
-		sessionStorage.setItem(k,v);
-		})
-};
-user.get = x=>{
-	return sessionStorage.getItem(x);
-}
