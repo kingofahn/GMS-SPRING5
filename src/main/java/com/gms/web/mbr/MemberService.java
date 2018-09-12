@@ -2,7 +2,8 @@ package com.gms.web.mbr;
 
 import java.util.List;
 import java.util.Map;
-
+import org.springframework.stereotype.Component;
+@Component // bean으로 쓴다는 의미
 public interface MemberService {
 	public void add(Member p) ;
 	public List<?> list(Map<?,?>p) ;
