@@ -5,14 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import com.gms.web.cmm.Util;
 
+@RestController
 @Controller
 @RequestMapping("/member")
 @SessionAttributes("user")
+
 public class MemberCtrl {
 	@Autowired Member member;
 	@Autowired MemberService memberService;
@@ -61,7 +65,7 @@ public class MemberCtrl {
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value="/login", method=RequestMethod.POST)
+	@PostMapping("/login")
 	public String login(@ModelAttribute("member") Member param, Model model) {
 		Util.log.accept("\n --------- MemberController !!--------");
 		String view = "login_failed";
