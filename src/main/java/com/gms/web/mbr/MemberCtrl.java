@@ -1,6 +1,5 @@
 package com.gms.web.mbr;
-import java.util.function.Function;
-import java.util.function.Predicate;
+import java.util.function.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

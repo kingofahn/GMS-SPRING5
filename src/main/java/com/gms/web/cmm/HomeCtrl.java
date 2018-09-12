@@ -1,22 +1,19 @@
 package com.gms.web.cmm;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.function.*;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeCtrl {
-	static final Logger logger = LoggerFactory.getLogger(HomeCtrl.class);
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(HttpSession session, HttpServletRequest request) {
-		String  ctx = request.getContextPath();
-		logger.info("\n --------- Welcome {} !! ----------","Home");
-		session.setAttribute("ctx", ctx);
-		//model.addAttribute("context", "");
+	public String home(Model model, HttpServletRequest request) {
+		model.addAttribute("ctx", Util.ctx.apply(request));
+		Util.log.accept("Util.ctx.apply(request)  :::: "+ Util.ctx.apply(request));
+		Util.log.accept("\n --------- Welcome Home !! ----------");
 		return "main";
 	}
 	@RequestMapping("/move/{prefix}/{dir}/{page}")
@@ -24,9 +21,9 @@ public class HomeCtrl {
 			@PathVariable String prefix,
 			@PathVariable String dir,
 			@PathVariable String page) {
-		logger.info("\n --------- HomeController {} !!--------","move()");
+		Util.log.accept("\n --------- HomeController moce !!--------");
 		String path = prefix+":"+dir+"/"+page+".tiles";
-		logger.info("\n move page >>> {}",path);
+		Util.log.accept("\n --------- HomeController moce !!--------"+path);
 		return path;
 	}
 }
