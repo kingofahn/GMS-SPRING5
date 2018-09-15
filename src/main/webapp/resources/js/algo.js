@@ -125,7 +125,7 @@ algo.main = {
        
     }
 };        
-            
+             
 /*         $('#t__1').html('<a id="arith__seq"><h3>등차수열</h3></a>');
             $('#t__1').append('<a id="swit__seq"><h3>스위치수열</h3></a>')
             $('#t__1').append('<a id="fibo__seq"><h3> 피보나치수열</h3></a>')
