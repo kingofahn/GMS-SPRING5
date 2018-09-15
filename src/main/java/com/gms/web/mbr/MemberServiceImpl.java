@@ -59,3 +59,11 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 }
+
+
+class test{
+	public static void main(String[] args) {
+		
+		
+	}
+}

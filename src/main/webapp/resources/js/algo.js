@@ -44,15 +44,54 @@ algo.main = {
 
     	$('<div/>').attr({id:'ques'}).appendTo($t__r);
        	$('<h4/>').html('시작값 x, 마지막값 y, 공차 d 인 등차수열의 합을 구하시오.').appendTo($('#ques'));
-       	$('<label/>').html('시작값 : ').appendTo($('#ques'));
-       	$('<input/>').attr({id:'sta',type:'text'}).appendTo($('#ques'));
-       	$('<br/>').appendTo($('#ques'));
-       	$('<label/>').html('마지막값 : ').appendTo($('#ques'));
-       	$('<input/>').attr({id:'end',type:'text'}).appendTo($('#ques'));
-       	$('<br/>').appendTo($('#ques'));
-       	$('<label/>').html('공차 : ').appendTo($('#ques'));
-       	$('<input/>').attr({id:'diff',type:'text'}).appendTo($('#ques'));
-       	$('<br/>').appendTo($('#ques'));
+       	
+       	let json = [{text:'시작값 : ',input:'sta'},
+   				{text:'마지막값 :',input:'end'},
+   				{text:'공차  :',input:'diff'}]
+       	
+       	$.each(json, (i,j)=> {
+       		$('<label/>').html(j.text).appendTo($('#ques'));
+           	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
+           	$('<br/>').appendTo($('#ques'));
+       	});
+       	
+       	/* 
+       	 //기본 for
+   	  	for(let i in j){
+       		$('<label/>').html(j[i].text).appendTo($('#ques'));
+           	$('<input/>').attr({id : j[i].input, type:'text'}).appendTo($('#ques'));
+           	$('<br/>').appendTo($('#ques'));
+           	
+           	let arr = [{id:'sta', label:'시작값'},
+       		{id:'end', label:'마지막값'},
+       		{id:'diff', label:'공차'}];
+       	// hye-ri
+      	for(let i in arr){
+       		$('<label/>').html(arr[i].label).appendTo($('#ques'));
+           	$('<input/>').attr({id: arr[i].id,type:'text'}).appendTo($('#ques'));
+           	$('<br/>').appendTo($('#ques'));
+       	}
+       	
+       	// dan-a
+       	$(arr).each(function(){
+       		$('<label/>').html(this.label).appendTo($('#ques'));
+           	$('<input/>').attr({id: this.id,type:'text'})
+           		.appendTo($('#ques'));
+           	$('<br/>').appendTo($('#ques'))
+       	});
+       	// nuri
+       	$.each(arr,function(){
+			$('<label>').html(this.label).appendTo($('#ques'));
+			$('<input>').attr({id: this.id ,type:'text'}).appendTo($('#ques'));
+			$('<br>').appendTo($('#ques'));
+		});
+       	// sojin
+     	$.each(arr,(i,j)=>{
+       		$('<label/>').html(j.label).appendTo($('#ques'));
+           	$('<input/>').attr({id: j.id,type:'text'}).appendTo($('#ques'));
+           	$('<br/>').appendTo($('#ques'));
+       	}
+       	}*/
        	
        	$('<button/>')
        	.addClass('btn btn-primary')
