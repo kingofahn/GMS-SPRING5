@@ -20,4 +20,3 @@ $.prototype.zeroChecker=x=>{  // $에 프로토타입 널체크를 넣어놔 의
 	}
 	return flag;
 }
-
