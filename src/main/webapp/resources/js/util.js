@@ -10,7 +10,6 @@ $.prototype.nullChecker=x=>{  // $에 프로토타입 널체크를 넣어놔 의
 	return flag;
 }
 
-"use strict"
 $.prototype.zeroChecker=x=>{  // $에 프로토타입 널체크를 넣어놔 의 의미임.
 	let flag =false;
 	let i = 0;
@@ -21,3 +20,4 @@ $.prototype.zeroChecker=x=>{  // $에 프로토타입 널체크를 넣어놔 의
 	}
 	return flag;
 }
+

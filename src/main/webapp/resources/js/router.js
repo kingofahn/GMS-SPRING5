@@ -11,5 +11,3 @@ function Session(x) {  // 생성자로 사용할거라서 대문자로 준다.
 		img : ()=>{return sessionStorage.getItem('img');}
 	};
 }
-
-

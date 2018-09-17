@@ -50,12 +50,13 @@ algo.main = {
        .addClass('list-group-item')
        .appendTo($('#side__menu'));
        
+       /*$.ui.anchor({txt:'등차수열의 합'})*/
        
-       $('<a/>')
-       .attr({href : '#'})
-       .html('등차수열의 합')
-       .appendTo($('#arith'))
-       .click(e=>{
+        $('<a/>')
+        .attr({href : '#'})
+        .html('등차수열의 합')
+        .appendTo($('#arith'))
+        .click(e=>{
     	$t__r.empty();
     	$('<div/>').attr({id:'ques'}).appendTo($t__r);
        	$('<h4/>').html('시작값 x, 마지막값 y, 공차 d 인 등차수열의 합을 구하시오.').appendTo($('#ques'));
@@ -79,7 +80,7 @@ algo.main = {
         	        [$('#sta').val(),
             	        $('#end').val(),
             	        $('#diff').val()]))){
-       			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+       			a.html('빈칸을 채우세요').appendTo($('#ques'));
        		}else{
             	let sta = $('#sta').val()*1;
             	let end = $('#end').val()*1;
@@ -124,7 +125,7 @@ algo.main = {
         	        [$('#sta').val(),
             	        $('#sec').val(),
             	        $('#n').val()]))){
-       			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+       			a.html('빈칸을 채우세요').appendTo($('#ques'));
        		}else{
        			let a1 = $('#sta').val()*1;
        			let a2 = $('#sec').val()*1;
@@ -176,7 +177,7 @@ algo.main = {
        		if(($.fn.zeroChecker(
         	        [$('#sta').val(),
             	        $('#end').val()]))){
-       			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+       			a.html('빈칸을 채우세요').appendTo($('#ques'));
        		}else{
             	let sta = $('#sta').val()*1;
             	console.log('sta :: '+sta);
@@ -220,7 +221,7 @@ algo.main = {
        		if(($.fn.zeroChecker(
         	        [$('#sta').val(),
         	        $('#end').val()]))){
-       			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+       			a.html('빈칸을 채우세요').appendTo($('#ques'));
        		}else{
             	let sta = $('#sta').val()*1;
             	let end = $('#end').val()*1;
@@ -276,26 +277,26 @@ algo.main = {
       .appendTo($('#bubble'))
       .click(e=>{
       	$t__r1.empty();
-      	$('<div/>').attr({id:'ques'}).appendTo($t__r1);
-      	$('<h4/>').html('버블정렬을 구하시오.').appendTo($('#ques'));
+      	$('<div/>').attr({id:'ques1'}).appendTo($t__r1);
+      	$('<h4/>').html('버블정렬을 구하시오.').appendTo($('#ques1'));
       	let json = [{text:'첫번째 : ',input:'one'},
       				{text:'두번째 : ',input:'two'},
       				{text:'세번째 : ',input:'thr'},
       				{text:'네번째 : ',input:'fou'},
   					{text:'다섯번째 :',input:'fiv'}]	
       	$.each(json, (i,j)=> {
-      		$('<label/>').html(j.text).appendTo($('#ques'));
-          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-          	$('<br/>').appendTo($('#ques'));
+      		$('<label/>').html(j.text).appendTo($('#ques1'));
+          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques1'));
+          	$('<br/>').appendTo($('#ques1'));
       	});
       	$('<button/>')
       	.addClass('btn btn-primary')
       	.attr({type:'button'})
       	.html('결과보기')
-      	.appendTo($('#ques'))
+      	.appendTo($('#ques1'))
       	.click(e=>{
-      		let a = $('<h6/>').attr({id:'checker'});
-      		$('#checker').remove();
+      		let a = $('<h6/>').attr({id:'checker1'});
+      		$('#checker1').remove();
       		if(($.fn.zeroChecker([
 			      				$('#one').val()*1,
 			                   	$('#two').val()*1,
@@ -306,7 +307,7 @@ algo.main = {
       								$('#'+j.input).val();
       							})*/
 								]))){
-      			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+      			a.html('빈칸을 채우세요').appendTo($('#ques1'));
       		}else{
                	let one = $('#one').val()*1;
                	let two = $('#two').val()*1;
@@ -322,7 +323,7 @@ algo.main = {
 	           		sum+=f;
 	           		console.log(sum);
 	           	}
-*/	           	a.html('결과값 : '+sum).appendTo($('#ques'));
+*/	           	a.html('결과값 : '+sum).appendTo($('#ques1'));
 	      		}
       	});
       });
@@ -333,27 +334,27 @@ algo.main = {
       .appendTo($('#insert'))
       .click(e=>{
       	$t__r1.empty();
-      	$('<div/>').attr({id:'ques'}).appendTo($t__r1);
-      	$('<h4/>').html('삽입정렬을 구하시오.').appendTo($('#ques'));
+      	$('<div/>').attr({id:'ques1'}).appendTo($t__r1);
+      	$('<h4/>').html('삽입정렬을 구하시오.').appendTo($('#ques1'));
       	let json = [{text:'시작값 : ',input:'sta'},
       			{text:'마지막값 :',input:'end'}]
       	$.each(json, (i,j)=> {
-      		$('<label/>').html(j.text).appendTo($('#ques'));
-          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-          	$('<br/>').appendTo($('#ques'));
+      		$('<label/>').html(j.text).appendTo($('#ques1'));
+          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques1'));
+          	$('<br/>').appendTo($('#ques1'));
       	});
       	$('<button/>')
       	.addClass('btn btn-primary')
       	.attr({type:'button'})
       	.html('결과보기')
-      	.appendTo($('#ques'))
+      	.appendTo($('#ques1'))
       	.click(e=>{
-      		let a = $('<h6/>').attr({id:'checker'});
-      		$('#checker').remove();
+      		let a = $('<h6/>').attr({id:'checker1'});
+      		$('#checker1').remove();
       		if(($.fn.zeroChecker(
        	        [$('#sta').val(),
        	        $('#end').val()]))){
-      			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+      			a.html('빈칸을 채우세요').appendTo($('#ques1'));
       		}else{
            	let sta = $('#sta').val()*1;
            	let end = $('#end').val()*1;
@@ -366,7 +367,7 @@ algo.main = {
            		sum+=f;
            		console.log(sum);
            	}
-           	a.html('결과값 : '+sum).appendTo($('#ques'));
+           	a.html('결과값 : '+sum).appendTo($('#ques1'));
       		}
       	});
       });
@@ -377,27 +378,27 @@ algo.main = {
       .appendTo($('#select'))
       .click(e=>{
       	$t__r1.empty();
-      	$('<div/>').attr({id:'ques'}).appendTo($t__r1);
-      	$('<h4/>').html('선택정렬을 구하시오.').appendTo($('#ques'));
+      	$('<div/>').attr({id:'ques1'}).appendTo($t__r1);
+      	$('<h4/>').html('선택정렬을 구하시오.').appendTo($('#ques1'));
       	let json = [{text:'시작값 : ',input:'sta'},
       			{text:'마지막값 :',input:'end'}]
       	$.each(json, (i,j)=> {
-      		$('<label/>').html(j.text).appendTo($('#ques'));
-          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-          	$('<br/>').appendTo($('#ques'));
+      		$('<label/>').html(j.text).appendTo($('#ques1'));
+          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques1'));
+          	$('<br/>').appendTo($('#ques1'));
       	});
       	$('<button/>')
       	.addClass('btn btn-primary')
       	.attr({type:'button'})
       	.html('결과보기')
-      	.appendTo($('#ques'))
+      	.appendTo($('#ques1'))
       	.click(e=>{
-      		let a = $('<h6/>').attr({id:'checker'});
-      		$('#checker').remove();
+      		let a = $('<h6/>').attr({id:'checker1'});
+      		$('#checker1').remove();
       		if(($.fn.zeroChecker(
        	        [$('#sta').val(),
        	        $('#end').val()]))){
-      			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+      			a.html('빈칸을 채우세요').appendTo($('#ques1'));
       		}else{
            	let sta = $('#sta').val()*1;
            	let end = $('#end').val()*1;
@@ -410,7 +411,7 @@ algo.main = {
            		sum+=f;
            		console.log(sum);
            	}
-           	a.html('결과값 : '+sum).appendTo($('#ques'));
+           	a.html('결과값 : '+sum).appendTo($('#ques1'));
       		}
       	});
       });
@@ -421,27 +422,27 @@ algo.main = {
       .appendTo($('#ranking'))
       .click(e=>{
       	$t__r1.empty();
-      	$('<div/>').attr({id:'ques'}).appendTo($t__r1);
-      	$('<h4/>').html('랭킹을 구하시오.').appendTo($('#ques'));
+      	$('<div/>').attr({id:'ques1'}).appendTo($t__r1);
+      	$('<h4/>').html('랭킹을 구하시오.').appendTo($('#ques1'));
       	let json = [{text:'시작값 : ',input:'sta'},
       			{text:'마지막값 :',input:'end'}]
       	$.each(json, (i,j)=> {
-      		$('<label/>').html(j.text).appendTo($('#ques'));
-          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-          	$('<br/>').appendTo($('#ques'));
+      		$('<label/>').html(j.text).appendTo($('#ques1'));
+          	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques1'));
+          	$('<br/>').appendTo($('#ques1'));
       	});
       	$('<button/>')
       	.addClass('btn btn-primary')
       	.attr({type:'button'})
       	.html('결과보기')
-      	.appendTo($('#ques'))
+      	.appendTo($('#ques1'))
       	.click(e=>{
-      		let a = $('<h6/>').attr({id:'checker'});
-      		$('#checker').remove();
+      		let a = $('<h6/>').attr({id:'checker1'});
+      		$('#checker1').remove();
       		if(($.fn.zeroChecker(
        	        [$('#sta').val(),
        	        $('#end').val()]))){
-      			a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+      			a.html('빈칸을 채우세요').appendTo($('#ques1'));
       		}else{
            	let sta = $('#sta').val()*1;
            	let end = $('#end').val()*1;
@@ -454,7 +455,7 @@ algo.main = {
            		sum+=f;
            		console.log(sum);
            	}
-           	a.html('결과값 : '+sum).appendTo($('#ques'));
+           	a.html('결과값 : '+sum).appendTo($('#ques1'));
       		}
       	});
       });
@@ -502,27 +503,27 @@ algo.main = {
 		.appendTo($('#fiveBy5'))
 		.click(e=>{
 			$t__r2.empty();
-			$('<div/>').attr({id:'ques'}).appendTo($t__r2);
-			$('<h4/>').html('fiveBy5을  구하시오.').appendTo($('#ques'));
+			$('<div/>').attr({id:'ques2'}).appendTo($t__r2);
+			$('<h4/>').html('fiveBy5을  구하시오.').appendTo($('#ques2'));
 			let json = [{text:'시작값 : ',input:'sta'},
 					{text:'마지막값 :',input:'end'}]
 			$.each(json, (i,j)=> {
-				$('<label/>').html(j.text).appendTo($('#ques'));
-		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-		   	$('<br/>').appendTo($('#ques'));
+				$('<label/>').html(j.text).appendTo($('#ques2'));
+		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques2'));
+		   	$('<br/>').appendTo($('#ques2'));
 			});
 			$('<button/>')
 			.addClass('btn btn-primary')
 			.attr({type:'button'})
 			.html('결과보기')
-			.appendTo($('#ques'))
+			.appendTo($('#ques2'))
 			.click(e=>{
-				let a = $('<h6/>').attr({id:'checker'});
-				$('#checker').remove();
+				let a = $('<h6/>').attr({id:'checker2'});
+				$('#checker2').remove();
 				if(($.fn.zeroChecker(
 			        [$('#sta').val(),
 			        $('#end').val()]))){
-					a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+					a.html('빈칸을 채우세요').appendTo($('#ques2'));
 				}else{
 		    	let sta = $('#sta').val()*1;
 		    	let end = $('#end').val()*1;
@@ -535,7 +536,7 @@ algo.main = {
 		    		sum+=f;
 		    		console.log(sum);
 		    	}
-		    	a.html('결과값 : '+sum).appendTo($('#ques'));
+		    	a.html('결과값 : '+sum).appendTo($('#ques2'));
 				}
 			});
 		});
@@ -546,27 +547,27 @@ algo.main = {
 		.appendTo($('#sandGlass'))
 		.click(e=>{
 			$t__r2.empty();
-			$('<div/>').attr({id:'ques'}).appendTo($t__r2);
-			$('<h4/>').html('sandGlass을  구하시오.').appendTo($('#ques'));
+			$('<div/>').attr({id:'ques2'}).appendTo($t__r2);
+			$('<h4/>').html('sandGlass을  구하시오.').appendTo($('#ques2'));
 			let json = [{text:'시작값 : ',input:'sta'},
 					{text:'마지막값 :',input:'end'}]
 			$.each(json, (i,j)=> {
-				$('<label/>').html(j.text).appendTo($('#ques'));
-		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-		   	$('<br/>').appendTo($('#ques'));
+				$('<label/>').html(j.text).appendTo($('#ques2'));
+		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques2'));
+		   	$('<br/>').appendTo($('#ques2'));
 			});
 			$('<button/>')
 			.addClass('btn btn-primary')
 			.attr({type:'button'})
 			.html('결과보기')
-			.appendTo($('#ques'))
+			.appendTo($('#ques2'))
 			.click(e=>{
-				let a = $('<h6/>').attr({id:'checker'});
-				$('#checker').remove();
+				let a = $('<h6/>').attr({id:'checker2'});
+				$('#checker2').remove();
 				if(($.fn.zeroChecker(
 			        [$('#sta').val(),
 			        $('#end').val()]))){
-					a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+					a.html('빈칸을 채우세요').appendTo($('#ques2'));
 				}else{
 		    	let sta = $('#sta').val()*1;
 		    	let end = $('#end').val()*1;
@@ -579,7 +580,7 @@ algo.main = {
 		    		sum+=f;
 		    		console.log(sum);
 		    	}
-		    	a.html('결과값 : '+sum).appendTo($('#ques'));
+		    	a.html('결과값 : '+sum).appendTo($('#ques2'));
 				}
 			});
 		});
@@ -590,27 +591,27 @@ algo.main = {
 		.appendTo($('#snail'))
 		.click(e=>{
 			$t__r2.empty();
-			$('<div/>').attr({id:'ques'}).appendTo($t__r2);
-			$('<h4/>').html('snail를 구하시오.').appendTo($('#ques'));
+			$('<div/>').attr({id:'ques2'}).appendTo($t__r2);
+			$('<h4/>').html('snail를 구하시오.').appendTo($('#ques2'));
 			let json = [{text:'시작값 : ',input:'sta'},
 					{text:'마지막값 :',input:'end'}]
 			$.each(json, (i,j)=> {
-				$('<label/>').html(j.text).appendTo($('#ques'));
-		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-		   	$('<br/>').appendTo($('#ques'));
+				$('<label/>').html(j.text).appendTo($('#ques2'));
+		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques2'));
+		   	$('<br/>').appendTo($('#ques2'));
 			});
 			$('<button/>')
 			.addClass('btn btn-primary')
 			.attr({type:'button'})
 			.html('결과보기')
-			.appendTo($('#ques'))
+			.appendTo($('#ques2'))
 			.click(e=>{
-				let a = $('<h6/>').attr({id:'checker'});
-				$('#checker').remove();
+				let a = $('<h6/>').attr({id:'checker2'});
+				$('#checker2').remove();
 				if(($.fn.zeroChecker(
 			        [$('#sta').val(),
 			        $('#end').val()]))){
-					a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+					a.html('빈칸을 채우세요').appendTo($('#ques2'));
 				}else{
 		    	let sta = $('#sta').val()*1;
 		    	let end = $('#end').val()*1;
@@ -623,7 +624,7 @@ algo.main = {
 		    		sum+=f;
 		    		console.log(sum);
 		    	}
-		    	a.html('결과값 : '+sum).appendTo($('#ques'));
+		    	a.html('결과값 : '+sum).appendTo($('#ques2'));
 				}
 			});
 		});
@@ -635,27 +636,27 @@ algo.main = {
 		.appendTo($('#diamond'))
 		.click(e=>{
 			$t__r2.empty();
-			$('<div/>').attr({id:'ques'}).appendTo($t__r2);
-			$('<h4/>').html('diamond를  구하시오.').appendTo($('#ques'));
+			$('<div/>').attr({id:'ques2'}).appendTo($t__r2);
+			$('<h4/>').html('diamond를  구하시오.').appendTo($('#ques2'));
 			let json = [{text:'시작값 : ',input:'sta'},
 					{text:'마지막값 :',input:'end'}]
 			$.each(json, (i,j)=> {
-				$('<label/>').html(j.text).appendTo($('#ques'));
-		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-		   	$('<br/>').appendTo($('#ques'));
+				$('<label/>').html(j.text).appendTo($('#ques2'));
+		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques2'));
+		   	$('<br/>').appendTo($('#ques2'));
 			});
 			$('<button/>')
 			.addClass('btn btn-primary')
 			.attr({type:'button'})
 			.html('결과보기')
-			.appendTo($('#ques'))
+			.appendTo($('#ques2'))
 			.click(e=>{
-				let a = $('<h6/>').attr({id:'checker'});
-				$('#checker').remove();
+				let a = $('<h6/>').attr({id:'checker2'});
+				$('#checker2').remove();
 				if(($.fn.zeroChecker(
 			        [$('#sta').val(),
 			        $('#end').val()]))){
-					a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+					a.html('빈칸을 채우세요').appendTo($('#ques2'));
 				}else{
 		    	let sta = $('#sta').val()*1;
 		    	let end = $('#end').val()*1;
@@ -668,7 +669,7 @@ algo.main = {
 		    		sum+=f;
 		    		console.log(sum);
 		    	}
-		    	a.html('결과값 : '+sum).appendTo($('#ques'));
+		    	a.html('결과값 : '+sum).appendTo($('#ques2'));
 				}
 			});
 		});
@@ -679,27 +680,27 @@ algo.main = {
 		.appendTo($('#zigzag'))
 		.click(e=>{
 			$t__r2.empty();
-			$('<div/>').attr({id:'ques'}).appendTo($t__r2);
-			$('<h4/>').html('zigzag를  구하시오.').appendTo($('#ques'));
+			$('<div/>').attr({id:'ques2'}).appendTo($t__r2);
+			$('<h4/>').html('zigzag를  구하시오.').appendTo($('#ques2'));
 			let json = [{text:'시작값 : ',input:'sta'},
 					{text:'마지막값 :',input:'end'}]
 			$.each(json, (i,j)=> {
-				$('<label/>').html(j.text).appendTo($('#ques'));
-		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques'));
-		   	$('<br/>').appendTo($('#ques'));
+				$('<label/>').html(j.text).appendTo($('#ques2'));
+		   	$('<input/>').attr({id : j.input, type:'text'}).appendTo($('#ques2'));
+		   	$('<br/>').appendTo($('#ques2'));
 			});
 			$('<button/>')
 			.addClass('btn btn-primary')
 			.attr({type:'button'})
 			.html('결과보기')
-			.appendTo($('#ques'))
+			.appendTo($('#ques2'))
 			.click(e=>{
-				let a = $('<h6/>').attr({id:'checker'});
-				$('#checker').remove();
+				let a = $('<h6/>').attr({id:'checker2'});
+				$('#checker2').remove();
 				if(($.fn.zeroChecker(
 			        [$('#sta').val(),
 			        $('#end').val()]))){
-					a.attr({id:'checker'}).html('빈칸을 채우세요').appendTo($('#ques'));
+					a.html('빈칸을 채우세요').appendTo($('#ques2'));
 				}else{
 		    	let sta = $('#sta').val()*1;
 		    	let end = $('#end').val()*1;
@@ -712,7 +713,7 @@ algo.main = {
 		    		sum+=f;
 		    		console.log(sum);
 		    	}
-		    	a.html('결과값 : '+sum).appendTo($('#ques'));
+		    	a.html('결과값 : '+sum).appendTo($('#ques2'));
 				}
 			});
 		});
@@ -723,32 +724,8 @@ algo.main = {
 };
 
 
-
-algo.series = {
-        arith : x =>{},
-        fibonacci : x =>{},
-        swit : x => {},
-        factorial : x => {}
-};
-algo.array = {
-        bubble : x =>{},
-        insert : x =>{},
-        select : x => {},
-        ranking : x =>{}
-};
-algo.matrix = {
-        fiveBy5 : x =>{},
-        sandGlass : x =>{},
-        snail : x =>{},
-        diamond : x =>{},
-        zigzag : x =>{}
-};
-algo.math = {};
-algo.appl = {};
-
 algo.router = {
     onCreate : x =>{
-        /*alert('step 2' + x);*/
         $.getScript(x+'/resources/js/router.js',  // 외부의 JS 파일을 호출하는 것. 자바로치면 import의 의미.
                 ()=>{
                     $.extend(new Session(x));        //확장. JS 객체기반언어
