@@ -42,6 +42,7 @@ app.main =(()=>{
                    +footerUI()
            );
            $('#login_btn').click(e=>{
+        	   
         	  /* e.preventDefault();*/
         	   app.permission.login();
         	   console.log('step4::: 로그인 성공');
