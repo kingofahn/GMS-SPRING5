@@ -149,7 +149,7 @@ app.permision = (()=>{
 						alert('에러발생 1'+m1);
 						alert('에러발생 2'+m2);
 						alert('에러발생 3'+m3); 
-						
+						 
 					} /* error END*/
 				}); /*AJAX END*/
 			}); /*login_form_btn END*/
